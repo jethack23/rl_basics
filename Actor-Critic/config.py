@@ -1,6 +1,4 @@
 class Config:
-    env_name = "CartPole-v0"
-
     q_fc_archi = [16, 32, 64]
 
     pi_fc_archi = [16, 32, 64]

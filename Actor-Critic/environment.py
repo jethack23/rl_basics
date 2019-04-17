@@ -36,7 +36,7 @@ class Environment:
         return self.state, self.reward, self.done
 
     def make(self):
-        self.env = gym.make(self.config.env_name)
+        self.env = gym.make("CartPole-v0")
         self._state = None
         self.reward = 0
         self.done = True
