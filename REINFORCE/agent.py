@@ -69,7 +69,7 @@ class Agent():
     def _build_net(self):
         with tf.variable_scope("policy"):
             self.S_in = tf.placeholder(
-                tf.float32, (None,) + self.config.input_shape, name="state")
+                tf.float32, (None,) + self.env.state_shape, name="state")
             self.pi = self._fc_net(self.S_in)
 
         self.loss, self.train_op = self._loss_and_train_op()
