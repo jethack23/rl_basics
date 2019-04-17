@@ -20,6 +20,10 @@ class Environment:
         self.env.render()
 
     @property
+    def state_shape(self):
+        return (4,)
+
+    @property
     def action_space_size(self):
         return self.env.action_space.n
 
@@ -32,7 +36,7 @@ class Environment:
         return self.state, self.reward, self.done
 
     def make(self):
-        self.env = gym.make(self.config.env_name)
+        self.env = gym.make("CartPole-v0")
         self._state = None
         self.reward = 0
         self.done = True
