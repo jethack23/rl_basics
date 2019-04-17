@@ -20,6 +20,10 @@ class Environment:
         self.env.render()
 
     @property
+    def state_shape(self):
+        return (4,)
+
+    @property
     def action_space_size(self):
         return self.env.action_space.n
 
